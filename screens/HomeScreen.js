@@ -38,7 +38,7 @@ export default function HomeScreen({ navigation }) {
 			});
 	}, []);
 	return (
-		<SafeAreaView className="bg-white">
+		<SafeAreaView className="bg-white mb-20">
 			{/* Header */}
 			<View className="flex-row items-center justify-between p-4 bg-white">
 				{/* Location */}
@@ -83,6 +83,7 @@ export default function HomeScreen({ navigation }) {
 						id={item._id}
 						title={item.name}
 						description={item.short_description}
+						navigation={navigation}
 					/>
 				))}
 			</ScrollView>

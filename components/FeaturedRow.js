@@ -4,7 +4,7 @@ import RestaurantCard from "./RestaurantCard";
 import { useEffect, useState } from "react";
 import client from "../sanity";
 
-const FeaturedRow = ({ id, title, description }) => {
+const FeaturedRow = ({ id, title, description, navigation }) => {
 	const [restaurants, setRestaurants] = useState([]);
 	useEffect(() => {
 		client
@@ -57,6 +57,7 @@ const FeaturedRow = ({ id, title, description }) => {
 						dishes={restaurant.dishes}
 						long={restaurant.long}
 						lat={restaurant.lat}
+						navigation={navigation}
 					/>
 				))}
 			</ScrollView>
